@@ -35,7 +35,8 @@ public class DatePickerFragment extends DialogFragment {
         return fragment;
     }
 
-    private void sendResult(int resultCode,Date date) {
+
+        private void sendResult(int resultCode,Date date) {
         if (getTargetFragment() == null)
             return;
 
