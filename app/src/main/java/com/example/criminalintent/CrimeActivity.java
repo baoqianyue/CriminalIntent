@@ -24,4 +24,5 @@ public class CrimeActivity extends SingleFragmentActivity {
         Fragment fragment = CrimeFragment.newInstance(crimeId);
         return fragment;
     }
+
 }
