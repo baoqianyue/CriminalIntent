@@ -75,12 +75,14 @@ public class CrimeLab {
             cursor.close();
         }
     }
+
     private static ContentValues getContentValues(Crime crime) {
         ContentValues values = new ContentValues();
         values.put(Cols.UUID, crime.getId().toString());
         values.put(Cols.TITLE, crime.getTitle());
         values.put(Cols.DATE, crime.getDate().getTime());
         values.put(Cols.SOLVED, crime.isSolved() ? 1 : 0);
+        values.put(Cols.SUSPECT, crime.getSuspect());
 
         return values;
     }
@@ -94,7 +96,6 @@ public class CrimeLab {
                 Cols.UUID + " = ?",
                 new String[]{uuidString});
     }
-
 
 
     private CrimeCursorWrapper queryCrimes(String whereClause, String[] whereArgs) {
