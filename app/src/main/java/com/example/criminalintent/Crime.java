@@ -12,7 +12,8 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
-    private String mSuspect;
+    private String mSuspect;//嫌疑人姓名
+
 
 
     public boolean isSolved() {
