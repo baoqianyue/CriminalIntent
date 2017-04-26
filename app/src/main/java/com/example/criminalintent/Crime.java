@@ -15,7 +15,6 @@ public class Crime {
     private String mSuspect;//嫌疑人姓名
 
 
-
     public boolean isSolved() {
         return mSolved;
     }
@@ -30,6 +29,10 @@ public class Crime {
 
     public void setSuspect(String suspect) {
         mSuspect = suspect;
+    }
+
+    public String getPhotoFilename() {
+        return "IMG_" + getId().toString() + ".jpg";
     }
 
     public Date getDate() {
@@ -61,5 +64,7 @@ public class Crime {
     public void setTitle(String title) {
         mTitle = title;
     }
+
+
 
 }
