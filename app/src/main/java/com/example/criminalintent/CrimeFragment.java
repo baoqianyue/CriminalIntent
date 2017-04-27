@@ -214,6 +214,14 @@ public class CrimeFragment extends Fragment {
         if (canTakePhoto) {
             Uri uri = Uri.fromFile(mPhotoFile);
             captureImage.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+//            Uri uri;
+//            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.M){
+//                uri = Uri.fromFile(mPhotoFile);
+//            }else {
+//                uri = FileProvider.getUriForFile(getActivity(),
+//                        ProviderUtil.getFileProviderName(getContext()),mPhotoFile);
+//                captureImage.putExtra(MediaStore.EXTRA_OUTPUT,u)
+//            }
         }
 
         mPhotoButton.setOnClickListener(new View.OnClickListener() {
